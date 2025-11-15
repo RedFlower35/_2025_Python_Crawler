@@ -1,6 +1,7 @@
 # 猜數字遊戲
 import random
-while True:
+
+def play_game():
     min = 1
     max = 100
     count = 0
@@ -19,10 +20,17 @@ while True:
             min = key +1
         
         print(f'請輸入{min}~{max}之間的數')
-    
-    isPlayAgain = input('請問是否繼續? y/n ')
-    if (isPlayAgain == 'n' or isPlayAgain == 'N'):
-        print('謝謝你來猜數字，再見了 !!')
-        break
 
-print('遊戲結束 !!')
+def main():
+    while True:
+        play_game()    
+        isPlayAgain = input('請問是否繼續? y/n ')
+        if (isPlayAgain == 'n' or isPlayAgain == 'N'):
+            print('謝謝你來猜數字，再見了 !!')
+            break
+
+    print('遊戲結束 !!')
+
+if __name__ == '__main__':
+    main()
+
